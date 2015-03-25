@@ -1,0 +1,268 @@
+body {
+  font-size:62.5%;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.page-wrapper {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+.page-wrapper > header {
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px dotted rgb(204, 204, 204);
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  /*margin-top: -7rem; /* Add space for main */
+  max-width: 900px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+.page-wrapper > header h1 {
+  color: rgb(107, 107, 107);
+  font-family: 'Raleway Dots', cursive;
+  font-size: 6rem;
+  font-weight: normal;
+  margin: 0 0 -.8rem 0;
+}
+.page-wrapper > header h1 span {
+  display: inline-block;
+}
+.page-wrapper > header h1 span::first-letter {
+  color: rgb(252, 107, 4);
+}
+
+.page-wrapper > header nav,
+.page-wrapper footer nav {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+.page-wrapper > header nav a,
+.page-wrapper footer nav a {
+  color: rgb(85, 85, 85);
+  display: inline-block;
+  font-family: 'Pompiere', cursive;
+  font-size: 2rem;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+.page-wrapper > header nav a:nth-of-type(1)::first-letter,
+.page-wrapper > header nav a:nth-of-type(2)::first-letter,
+.page-wrapper > header nav a:nth-of-type(3)::first-letter,
+.page-wrapper footer nav a:nth-of-type(1)::first-letter,
+.page-wrapper footer nav a:nth-of-type(2)::first-letter,
+.page-wrapper footer nav a:nth-of-type(3)::first-letter {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.page-wrapper > header nav a:nth-of-type(1)::first-letter,
+.page-wrapper footer nav a:nth-of-type(1)::first-letter {
+  color: rgb(252, 107, 4);
+}
+.page-wrapper > header nav a:nth-of-type(2)::first-letter,
+.page-wrapper footer nav a:nth-of-type(2)::first-letter {
+  color: rgb(252, 183, 4);
+}
+.page-wrapper > header nav a:nth-of-type(3)::first-letter,
+.page-wrapper footer nav a:nth-of-type(3)::first-letter {
+  color: rgb(150, 199, 105);
+}
+
+main {
+  /*margin-top: 7rem; /* Add space for header */*/
+}
+main section {
+  /*align-items: stretch;
+  -webkit-align-items: stretch;*/
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  min-height: 20rem;
+  overflow: hidden;
+  padding: 0 0 4rem;
+  position: relative;
+}
+main section.home:after,
+main section.resume:after,
+main section.contact:after {
+  color: rgb(245, 245, 245);
+  bottom: 2rem;
+  font-family: 'Pompiere', cursive;
+  font-size: 10rem;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+}
+main section.home:after {
+  content: "home";
+}
+main section.resume:after {
+  content: "resume";
+}
+main section.contact:after {
+  content: "contact";
+}
+main section header {
+  margin-left: -.7rem;
+  overflow: hidden;
+  width: 5rem;
+}
+main section:nth-of-type(1){
+  margin-top: 7rem; /*Extra space for header*/
+}
+main section:nth-of-type(1) header {
+  background-color: rgb(252, 107, 4);
+}
+main section:nth-of-type(2) header {
+  background-color: rgb(252, 183, 4);
+}
+main section:nth-of-type(3) header {
+  background-color: rgb(150, 199, 105);
+}
+main section header h2 {
+  color: rgb(255, 255, 255);
+  font-family: 'Pompiere', cursive;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+main article {
+  border: 3px solid rgb(238, 238, 238);
+  margin-left: 0.5rem;
+  padding: 1rem 1rem 5rem 1rem;
+  width: calc(100% - 5rem);
+}
+main section:nth-of-type(1) article {
+  border-left-color: rgb(252, 107, 4);
+}
+main section:nth-of-type(2) article {
+  border-left-color: rgb(252, 183, 4);
+}
+main section:nth-of-type(3) article {
+  border-left-color: rgb(150, 199, 105);
+}
+main article a,
+main article p {
+  color: #777;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0 0 .5rem;
+}
+main article a{
+  text-decoration: none;
+}
+
+main article h2{
+  font-family: Arimo, sans-serif;
+  font-size: 2.2rem;
+  color: #777;
+  margin: 0 0 1rem 0;
+}
+
+/* ========== resume page ========== */
+
+main article .border {
+  background: #FFF;
+  border: 2px solid #FC6B04;
+  border-radius: .3rem;
+}
+
+/* ========== barchart ========== */
+
+#chart-skills svg {
+  border: 2px solid #EEE;
+  border-radius: .3rem;
+}
+#chart-skills .v-guide text,
+#chart-skills .h-guide text {
+  color: #AAA;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+/* ========== experience timeline ========== */
+.experience > div {
+  border: 2px solid #EEE;
+  border-radius: .3rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.experience > div p.time.end,
+.experience > div p.time.start {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: -2rem;
+  padding: 0.6rem;
+}
+
+
+/* ========== contact page ========== */
+
+.contact .linkedin,
+.contact .github {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 5rem;
+  text-indent: -999rem;
+  width: 5rem;
+}
+.contact .linkedin {
+  background-image: url(../img/linkedin.png);
+}
+.contact .github {
+  background-image: url(../img/octocat.png);
+}
+
+
+footer {
+  border-top: 2px dotted rgb(204, 204, 204);
+}
+
+.download {
+  align-items: center;
+  -webkit-align-items: center;
+  background-image: url(../img/download.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 88%;
+  background-color: #FC6B04;
+  border-radius: 50%;
+  bottom: 1rem;
+  color: #FFF;
+  font-family: tahoma, sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  height: 10rem;
+  opacity: .6;
+  right: 1rem;
+  padding: 1rem;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 300ms;
+  width: 10rem;
+  z-index: 10;
+}
+.download:hover {
+  opacity: 1;
+}

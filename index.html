@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
   <meta charset="UTF-8">
   <title>Test</title>
   <link href='http://fonts.googleapis.com/css?family=Pompiere|Raleway+Dots' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
 </head>
 <body>
 <div class="page-wrapper">
@@ -14,33 +17,49 @@
       <a href="#resume">resume</a>
       <a href="#contact">contact</a>
     </nav>
+
   </header>
   <main>
-    <section class="resume">
+    <section class="resume" id="resume">
       <header>
         <h2>resume</h2>
       </header>
       <article>
-      <a href="img/resume.pdf" target="blank">Download resume</a>
+      <!-- <a href="img/resume.pdf" target="blank" class="border">Download resume</a> -->
       <div class="container">
-      <h2>Skill sets in years:</h2>
-      <div id="chart-skills"></div>
-</div>
+        <h2>Skill sets in years:</h2>
+        <div id="chart-skills"></div>
+        <div class="experience" ng-controller="MyController">
+
+            <div ng-repeat="item in works">
+              <p class="time end border">{{ item.time.end }}</p>
+              <h2 class="title">{{ item.title }}</h2>
+
+              <p class="company">{{ item.company }}</p>
+              <p class="skill">{{ item.skill }}</p>
+              <p class="detail">{{ item.detail }}</p>
+              <p class="time start border">{{ item.time.start }}</p>
+            </div>
+
+        </div>
+      </div>
 
       </article>
 
     </section>
 
-      <section class="contact">
+      <section class="contact" id="contact">
       <header>
         <h2>contact</h2>
       </header>
       <article>
         <p>Please contact her via linkedIn</p>
+
         <div>
           <a href="https://www.linkedin.com/in/miwayagi" class="linkedin" target="blank">LinkedIn</a>
           <a href="https://github.com/peeweemiwie" class="github" target="blank">github</a>
         </div>
+
       </article>
     </section>
   </main>
@@ -51,9 +70,11 @@
     </nav>
   </footer>
 </div>
-
+<a href="img/resume.pdf" target="blank" class="download">View and Download Resume</a>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
+<script src="js/barchart.js"></script>
+<script src="js/timeline.js"></script>
 </body>
 </html>

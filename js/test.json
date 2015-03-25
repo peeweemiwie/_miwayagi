@@ -1,0 +1,29 @@
+$scope.items =[
+  {
+    'title': "Mary",
+    'detail':[
+      "Lorem ipsum dolor sit amet",
+      "HTML, CSS, js",
+      "Photoshop, Illustrator"
+    ]
+  },
+  {
+    'title': "Susan",
+    'detail':[
+      "Responsive Website, Desktop, Mobile, Tablet",
+      "Photoshop, Illustrator"
+    ]
+  },
+  {
+    'title': "Jane",
+    'detail':"Lorem ipsum dolor sit amet",
+  }
+]
+
+
+<div ng-controller="MyController">
+  <div ng-repeat="item in items">
+    <p class="title">{{ item.title }}</p>
+    <p class="detail">{{ item.detail }}</p>
+  </div>
+</div>
