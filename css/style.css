@@ -18,7 +18,6 @@ body {
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex;
-  /*margin-top: -7rem; /* Add space for main */
   max-width: 900px;
   position: fixed;
   top: 0;
@@ -81,12 +80,7 @@ body {
   color: rgb(150, 199, 105);
 }
 
-main {
-  /*margin-top: 7rem; /* Add space for header */*/
-}
 main section {
-  /*align-items: stretch;
-  -webkit-align-items: stretch;*/
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -145,7 +139,7 @@ main section header h2 {
 main article {
   border: 3px solid rgb(238, 238, 238);
   margin-left: 0.5rem;
-  padding: 1rem 1rem 5rem 1rem;
+  padding: 1rem 2rem 5rem 2rem;
   width: calc(100% - 5rem);
 }
 main section:nth-of-type(1) article {
@@ -209,29 +203,59 @@ main article .border {
   display: inline-block;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-left: -2rem;
+  margin-left: -2.5rem;
   padding: 0.6rem;
 }
 
 
 /* ========== contact page ========== */
-
+.contact article {
+  align-items: center;
+  -webkit-align-items: center;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
 .contact .linkedin,
 .contact .github {
   background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
-  height: 5rem;
-  text-indent: -999rem;
-  width: 5rem;
+  display: flex;
+  border: 2px solid #FCB704;
+  border-radius: 50%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  font-size: 2.3rem;
+  height: 20rem;
+  justify-content: center;
+  -webkit-justify-content: center;
+  margin: 0 1rem;
+  padding: 3rem;
+  text-align: center;
+  transition: background-color 300ms, color 300ms, opacity 300ms;
+  width: 20rem;
 }
 .contact .linkedin {
   background-image: url(../img/linkedin.png);
+  background-position: center 13rem;
+  background-size: 30%;
 }
 .contact .github {
   background-image: url(../img/octocat.png);
+  background-position: bottom;
+  background-size: 50%;
+  line-height: 95%;
+}
+.contact .linkedin:hover,
+.contact .github:hover {
+  background-color: #FCB704;
+  color: #FFF;
+  opacity: .5;
 }
 
+/* ========== footer and download ========== */
 
 footer {
   border-top: 2px dotted rgb(204, 204, 204);
@@ -252,6 +276,8 @@ footer {
   font-size: 1.6rem;
   font-weight: bold;
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   height: 10rem;
   opacity: .6;
   right: 1rem;
