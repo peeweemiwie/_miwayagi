@@ -1,6 +1,6 @@
 body {
-  font-size:62.5%;
-  margin: 0;
+font-size:62.5%;
+margin: 0;
 }
 * {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
 }
 .page-wrapper,
 .page-wrapper > header  {
-  max-width: 600px;
+  /*max-width: 600px;*/
   width: 100%;
 }
 .page-wrapper > header {
