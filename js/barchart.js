@@ -21,7 +21,7 @@ bardata.sort(function compareNumbers(a,b) {
 var margin = {top: 30, right: 30, bottom: 40, left: 100}
 
 var height = 300 - margin.top - margin.bottom,
-    width = 500 - margin.left - margin.right,
+    width = 740 - margin.left - margin.right,
     barOffset = 5,
     barHeight = Math.floor(height / bardata.length) - barOffset;
 
