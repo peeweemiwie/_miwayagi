@@ -52,7 +52,7 @@ body {
 }
 .page-wrapper > header nav a,
 .page-wrapper footer nav a {
-  border-radius: 2rem;
+  border-radius: 50%;
   color: rgb(85, 85, 85);
   display: inline-block;
   font-family: 'Pompiere', cursive;
@@ -234,8 +234,8 @@ main article h3{
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex;
-  justify-content: center;
-  -webkit-justify-content: center;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
 }
 .contact .linkedin,
 .contact .github {
