@@ -33,17 +33,21 @@
         <h2>Things Miwa is interested in technology:</h2>
         <div id="chart-buzzwords"></div>
         <div class="experience" ng-controller="MyController">
-
+            <h2>Work Experience: </h2>
             <div ng-repeat="item in works">
               <p class="time end">{{ item.time.end }}</p>
               <h2 class="title">{{ item.title }}</h2>
-
               <p class="company">{{ item.company }}</p>
               <p class="skill">{{ item.skill }}</p>
               <p class="detail" ng-repeat="detail in item.detail">{{ detail }}</p>
               <p class="time start">{{ item.time.start }}</p>
             </div>
-
+            <h2>Education: </h2>
+            <div ng-repeat="item in education">
+              <h3 class="course">{{ item.course }}</h3>
+              <p class="school">{{ item.school }}</p>
+              <p class="subjects">{{ item.subjects }}</p>
+            </div>
         </div>
       </div>
 

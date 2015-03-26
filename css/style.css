@@ -169,12 +169,20 @@ main article p {
 main article a{
   text-decoration: none;
 }
-
-main article h2{
+main article h2,
+main article h3 {
   font-family: Arimo, sans-serif;
-  font-size: 2.2rem;
   color: #777;
   margin: 0 0 1rem 0;
+}
+main article h2{
+  font-size: 2.2rem;
+}
+main article .experience > h2{
+  color: #FC6B04;
+}
+main article h3{
+  font-size: 1.8rem;
 }
 
 /* ========== barchart ========== */

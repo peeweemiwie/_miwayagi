@@ -37,5 +37,17 @@ myApp.controller('MyController', function MyController($scope) {
       'skill': 'HTML, CSS',
       'detail': ['HTML web page development, Email campaign and landing page']
     }
+  ];
+  $scope.education =   [
+    {
+      'course': 'Certificate in web development',
+      'school': 'New York University - Still in progress',
+      'subjects': 'JavaScript, Information Architecture, HTML5'
+    },
+    {
+      'course': 'Certificate in web digital design',
+      'school': 'Baruch College',
+      'subjects': 'Illustrator, Photoshop, InDesign, Dreamweaver, Flash Animation, ActionScript 2, Fireworks,HTML, CSS, JavaScript'
+    }
   ]
 });
