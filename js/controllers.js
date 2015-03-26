@@ -23,7 +23,7 @@ myApp.controller('MyController', function MyController($scope) {
         'start': 'March 2011',
         'end': 'April 2012'
       },
-      'company': 'Clients: Standard & Poors, AKA NYC, Manhattan Marketing Ensemble, Tag Worldwide, Exposure New York, Mundocom',
+      'company': 'Clients: Standard & Poors, AKA NYC, Manhattan Marketing Ensemble, Tag Worldwide, Exposure New York, Mundocom - Publicis',
       'skill': 'HTML, CSS, flash animation',
       'detail': ['HTML / CSS development, Flash ad banner, Business to Business Newsletter templates, Email campaign and landing pages']
     },

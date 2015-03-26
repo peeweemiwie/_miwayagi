@@ -215,7 +215,10 @@ main article h2{
   margin-left: -2.5rem;
   padding: 0.6rem;
 }
-
+.experience > div p.detail:before {
+  content: "\2022  ";
+  color: #FC6B04;
+}
 /* ========== contact page ========== */
 .contact article {
   align-items: center;
