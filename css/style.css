@@ -178,16 +178,25 @@ main article h2{
 }
 
 /* ========== barchart ========== */
-#chart-skills svg {
-  border: 2px solid #EEE;
-  border-radius: .3rem;
-}
 #chart-skills .v-guide text,
 #chart-skills .h-guide text {
   color: #AAA;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
+/* ========== bubble chart ========== */
+#chart-buzzwords text {
+  font: .5rem sans-serif;
+}
+
+/* ========== barchart && bubble chart ========== */
+#chart-skills svg,
+#chart-buzzwords svg {
+  border: 2px solid #EEE;
+  border-radius: .3rem;
+  margin-bottom: 2rem;
+}
+
 /* ========== experience timeline ========== */
 .experience > div {
   border: 2px solid #EEE;
