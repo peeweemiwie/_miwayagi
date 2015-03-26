@@ -40,7 +40,7 @@
 
               <p class="company">{{ item.company }}</p>
               <p class="skill">{{ item.skill }}</p>
-              <p class="detail">{{ item.detail }}</p>
+              <p class="detail" ng-repeat="detail in item.detail">{{ detail }}</p>
               <p class="time start">{{ item.time.start }}</p>
             </div>
 

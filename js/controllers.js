@@ -25,7 +25,7 @@ myApp.controller('MyController', function MyController($scope) {
       },
       'company': 'Clients: Standard & Poors, AKA NYC, Manhattan Marketing Ensemble, Tag Worldwide, Exposure New York, Mundocom',
       'skill': 'HTML, CSS, flash animation',
-      'detail': 'HTML / CSS development, Flash ad banner, Business to Business Newsletter templates, Email campaign and landing pages'
+      'detail': ['HTML / CSS development, Flash ad banner, Business to Business Newsletter templates, Email campaign and landing pages']
     },
     {
       'title': 'Web Content Administration',
@@ -35,7 +35,7 @@ myApp.controller('MyController', function MyController($scope) {
       },
       'company': 'Evolution Store',
       'skill': 'HTML, CSS',
-      'detail': 'HTML web page development, Email campaign and landing page'
+      'detail': ['HTML web page development, Email campaign and landing page']
     }
   ]
 });
