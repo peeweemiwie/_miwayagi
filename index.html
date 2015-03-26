@@ -27,20 +27,19 @@
         <h2>resume</h2>
       </header>
       <article>
-      <!-- <a href="img/resume.pdf" target="blank" class="border">Download resume</a> -->
       <div class="container">
         <h2>Skill sets in years:</h2>
         <div id="chart-skills"></div>
         <div class="experience" ng-controller="MyController">
 
             <div ng-repeat="item in works">
-              <p class="time end border">{{ item.time.end }}</p>
+              <p class="time end">{{ item.time.end }}</p>
               <h2 class="title">{{ item.title }}</h2>
 
               <p class="company">{{ item.company }}</p>
               <p class="skill">{{ item.skill }}</p>
               <p class="detail">{{ item.detail }}</p>
-              <p class="time start border">{{ item.time.start }}</p>
+              <p class="time start">{{ item.time.start }}</p>
             </div>
 
         </div>
