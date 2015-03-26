@@ -40,20 +40,6 @@ margin: 0;
 .page-wrapper > header h1 span::first-letter {
   color: rgb(252, 107, 4);
 }
-
-.page-wrapper > header nav {
-  /*position: absolute;*/
-}
-/*.page-wrapper footer nav {
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  justify-content: flex-end;
-  -webkit-justify-content: flex-end;
-}*/
 .page-wrapper > header nav a,
 .page-wrapper footer nav a {
   /*background-color: #fff;*/
@@ -77,27 +63,6 @@ margin: 0;
 .page-wrapper footer nav a:nth-of-type(2) {
   background-color: rgb(252, 183, 4);
 }
-/*.page-wrapper > header nav a:nth-of-type(1)::first-letter,
-.page-wrapper > header nav a:nth-of-type(2)::first-letter,
-.page-wrapper > header nav a:nth-of-type(3)::first-letter,
-.page-wrapper footer nav a:nth-of-type(1)::first-letter,
-.page-wrapper footer nav a:nth-of-type(2)::first-letter,
-.page-wrapper footer nav a:nth-of-type(3)::first-letter {
-  font-size: 5rem;
-  font-weight: bold;
-}*/
-/*.page-wrapper > header nav a:nth-of-type(1)::first-letter,
-.page-wrapper footer nav a:nth-of-type(1)::first-letter {
-  color: rgb(252, 107, 4);
-}
-.page-wrapper > header nav a:nth-of-type(2)::first-letter,
-.page-wrapper footer nav a:nth-of-type(2)::first-letter {
-  color: rgb(252, 183, 4);
-}
-.page-wrapper > header nav a:nth-of-type(3)::first-letter,
-.page-wrapper footer nav a:nth-of-type(3)::first-letter {
-  color: rgb(150, 199, 105);
-}*/
 main {
   margin-top: 6rem; /*Extra space for header*/
 }
@@ -127,15 +92,6 @@ main section header h2 {
 main article {
   padding: 1rem;
 }
-/*main section:nth-of-type(1) article {
-  border-left-color: rgb(252, 107, 4);
-}
-main section:nth-of-type(2) article {
-  border-left-color: rgb(252, 183, 4);
-}
-main section:nth-of-type(3) article {
-  border-left-color: rgb(150, 199, 105);
-}*/
 main article a,
 main article p {
   color: #777;
@@ -153,15 +109,6 @@ main article h2{
   color: #777;
   margin: 0 0 1rem 0;
 }
-
-/* ========== resume page ========== */
-
-main article .border {
-  background: #FC6B04;
-  border-radius: .5rem;
-  color: #FFF;
-}
-
 /* ========== barchart ========== */
 
 #chart-skills svg {
@@ -175,7 +122,6 @@ main article .border {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
-
 /* ========== experience timeline ========== */
 .experience > div {
   border: 2px solid #CCC;
@@ -183,17 +129,17 @@ main article .border {
   margin-bottom: 1rem;
   padding: 1rem 2rem;
 }
-
 .experience > div p.time.end,
 .experience > div p.time.start {
+  background: #FC6B04;
+  border-radius: .5rem;
+  color: #FFF;
   display: inline-block;
   font-size: 2rem;
   font-weight: bold;
   margin-left: -2.5rem;
   padding: 1rem;
 }
-
-
 /* ========== contact page ========== */
 .contact article {
   display: flex;

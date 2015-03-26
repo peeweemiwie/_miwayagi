@@ -55,7 +55,7 @@ body {
   color: rgb(85, 85, 85);
   display: inline-block;
   font-family: 'Pompiere', cursive;
-  font-size: 2rem;
+  font-size: 4.5rem;
   margin-left: 2rem;
   text-decoration: none;
 }
@@ -65,7 +65,7 @@ body {
 .page-wrapper footer nav a:nth-of-type(1)::first-letter,
 .page-wrapper footer nav a:nth-of-type(2)::first-letter,
 .page-wrapper footer nav a:nth-of-type(3)::first-letter {
-  font-size: 2.5rem;
+  /*font-size: 2.5rem;*/
   font-weight: bold;
 }
 .page-wrapper > header nav a:nth-of-type(1)::first-letter,
@@ -80,7 +80,9 @@ body {
 .page-wrapper footer nav a:nth-of-type(3)::first-letter {
   color: rgb(150, 199, 105);
 }
-
+main {
+  margin-top: 7rem;
+}
 main section {
   display: flex;
   display: -ms-flexbox;
@@ -111,8 +113,8 @@ main section.contact:after {
   content: "contact";
 }
 main section header {
-  margin-left: -.7rem;
   overflow: hidden;
+  padding-top: 1rem;
   width: 5rem;
 }
 main section:nth-of-type(1){
@@ -170,16 +172,7 @@ main article h2{
   margin: 0 0 1rem 0;
 }
 
-/* ========== resume page ========== */
-
-main article .border {
-  background: #FFF;
-  border: 2px solid #FC6B04;
-  border-radius: .3rem;
-}
-
 /* ========== barchart ========== */
-
 #chart-skills svg {
   border: 2px solid #EEE;
   border-radius: .3rem;
@@ -190,7 +183,6 @@ main article .border {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
-
 /* ========== experience timeline ========== */
 .experience > div {
   border: 2px solid #EEE;
@@ -198,16 +190,17 @@ main article .border {
   margin-bottom: 1rem;
   padding: 1rem;
 }
-
 .experience > div p.time.end,
 .experience > div p.time.start {
+  background: #FC6B04;
+  border-radius: .3rem;
+  color: #FFF;
   display: inline-block;
   font-size: 1.5rem;
   font-weight: bold;
   margin-left: -2.5rem;
   padding: 0.6rem;
 }
-
 
 /* ========== contact page ========== */
 .contact article {
