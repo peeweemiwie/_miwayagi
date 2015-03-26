@@ -31,7 +31,7 @@ margin: 0;
   color: rgb(107, 107, 107);
   font-family: 'Raleway Dots', cursive;
   font-size: 6rem;
-  font-weight: normal;
+  font-weight: bold;
   margin: 0;
 }
 .page-wrapper > header h1 span {
@@ -62,7 +62,8 @@ margin: 0;
   color: #FFF;
   display: inline-block;
   font-family: 'Pompiere', cursive;
-  font-size: 3.2rem;
+  font-size: 4rem;
+  font-weight: bold;
   line-height: 100%;
   margin-right: 1rem;
   padding: 1rem;
@@ -119,7 +120,7 @@ main section:nth-of-type(3) header {
 main section header h2 {
   color: rgb(255, 255, 255);
   font-family: 'Pompiere', cursive;
-  font-size: 4rem;
+  font-size: 6rem;
   margin: 0 0 0 1rem;
   padding: 0;
 }
@@ -156,9 +157,9 @@ main article h2{
 /* ========== resume page ========== */
 
 main article .border {
-  background: #FFF;
-  border: 2px solid #FC6B04;
-  border-radius: .3rem;
+  background: #FC6B04;
+  border-radius: .5rem;
+  color: #FFF;
 }
 
 /* ========== barchart ========== */
