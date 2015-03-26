@@ -52,12 +52,18 @@ body {
 }
 .page-wrapper > header nav a,
 .page-wrapper footer nav a {
+  border-radius: 2rem;
   color: rgb(85, 85, 85);
   display: inline-block;
   font-family: 'Pompiere', cursive;
   font-size: 4.5rem;
-  margin-left: 2rem;
+  padding: 0 1rem;
   text-decoration: none;
+  transition: background 300ms;
+}
+.page-wrapper > header nav a:hover,
+.page-wrapper footer nav a:hover {
+  background: rgba(252, 107, 4, 0.1);
 }
 .page-wrapper > header nav a:nth-of-type(1)::first-letter,
 .page-wrapper > header nav a:nth-of-type(2)::first-letter,
@@ -65,7 +71,6 @@ body {
 .page-wrapper footer nav a:nth-of-type(1)::first-letter,
 .page-wrapper footer nav a:nth-of-type(2)::first-letter,
 .page-wrapper footer nav a:nth-of-type(3)::first-letter {
-  /*font-size: 2.5rem;*/
   font-weight: bold;
 }
 .page-wrapper > header nav a:nth-of-type(1)::first-letter,
