@@ -1,45 +1,23 @@
-// nav to display the section
-var doc = document;
-var firstNavButton = doc.querySelectorAll('.page-wrapper header nav a')[0];
-var secondNavButton = doc.querySelectorAll('.page-wrapper header nav a')[1];
-var firstFooterNavButton = doc.querySelectorAll('.page-wrapper footer nav a')[0];
-var secondFooterNavButton = doc.querySelectorAll('.page-wrapper footer nav a')[1];
-
-// to do: set interval to scroll smoothly http://jsfiddle.net/DruwJ/1/
-firstNavButton.addEventListener('click', function(e){
-  e.preventDefault();
-  window.scrollTo(0, 0);
-}, true)
-
-firstFooterNavButton.addEventListener('click', function(e){
-  e.preventDefault();
-  window.scrollTo(0, 0);
-}, true)
-
-secondNavButton.addEventListener('click', function(e){
-  e.preventDefault();
-  window.scrollTo(0, document.body.scrollHeight);
-}, true)
-
-secondFooterNavButton.addEventListener('click', function(e){
-  e.preventDefault();
-  window.scrollTo(0, document.body.scrollHeight);
-}, true)
-
-
-// document.querySelector('body').addEventListener('click', function(e){
-//
-//   var firstNavButton = doc.querySelectorAll('.page-wrapper header nav a')[0];
-//   var secondNavButton = doc.querySelectorAll('.page-wrapper header nav a')[1];
-//   var firstFooterNavButton = doc.querySelectorAll('.page-wrapper footer nav a')[0];
-//   var secondFooterNavButton = doc.querySelectorAll('.page-wrapper footer nav a')[1];
-//
-//   if(e.target == firstNavButton || firstFooterNavButton){
-//     e.preventDefault();
-//     window.scrollTo(0, 0);
-//   }else if (e.target == firstFooterNavButton || secondFooterNavButton){
-//     e.preventDefault();
-//     window.scrollTo(0, document.body.scrollHeight);
-//   }
-//
-// }, true)
+var d = document;
+var firstNavButton = d.querySelectorAll('.page-wrapper header nav a')[0];
+var secondNavButton = d.querySelectorAll('.page-wrapper header nav a')[1];
+var firstFooterNavButton = d.querySelectorAll('.page-wrapper footer nav a')[0];
+var secondFooterNavButton = d.querySelectorAll('.page-wrapper footer nav a')[1];
+var scrollTopButtons = [firstNavButton, firstFooterNavButton];
+var scrollBottomButtons = [secondNavButton, secondFooterNavButton];
+var i=0;
+var j=0;
+for (i; i<scrollTopButtons.length; i++){
+  scrollTopButtons[i].addEventListener('click', function(e){
+    console.log("top");
+    e.preventDefault();
+    window.scrollTo(0, 0);
+  }, true)
+}
+for (j; j<scrollBottomButtons.length; j++){
+  scrollBottomButtons[j].addEventListener('click', function(e){
+    console.log('bottom');
+    e.preventDefault();
+    window.scrollTo(0, d.body.scrollHeight);
+  }, true)
+}
