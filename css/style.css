@@ -17,19 +17,22 @@ body {
   background-color: rgb(255, 255, 255);
   border-bottom: 2px dotted rgb(204, 204, 204);
   display: flex;
+  -ms-flex: 1;
+  -webkit-flex: 1;
   display: -ms-flexbox;
   display: -webkit-flex;
   max-width: 900px;
   position: fixed;
   top: 0;
-  transition: height 300ms;
+  transition: height 500ms;
   width: 100%;
   z-index: 3;
 }
 .page-wrapper > header h1 {
   color: rgb(107, 107, 107);
+  flex: 1.5;
   font-family: 'Raleway Dots', cursive;
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: normal;
   margin: 0 0 -.8rem 0;
   transition: font-size 500ms;
@@ -46,8 +49,8 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   flex: 1;
-  -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-flex: 1;
   justify-content: flex-end;
   -webkit-justify-content: flex-end;
 }
@@ -58,7 +61,7 @@ body {
   display: inline-block;
   font-family: 'Pompiere', cursive;
   font-size: 4.5rem;
-  padding: 0 1rem;
+  padding: 0 .3rem;
   text-decoration: none;
   transition: background 500ms;
 }
@@ -87,7 +90,7 @@ body {
   color: rgb(150, 199, 105);
 }
 .page-wrapper > header nav a {
-  transition: font-size 500ms;
+  transition: line-height 500ms;
 }
 /* When page scrolled, header gets narrow */
 .page-wrapper > header.narrow{
@@ -100,7 +103,7 @@ body {
   line-height: 70%
 }
 main {
-  margin-top: 7rem;
+  margin-top: 9rem;
 }
 main section {
   display: flex;
@@ -279,6 +282,7 @@ main article h3{
   display: -ms-flexbox;
   display: -webkit-flex;
   justify-content: space-around;
+  -ms-justify-content: space-around;
   -webkit-justify-content: space-around;
 }
 .contact .linkedin,
@@ -293,6 +297,7 @@ main article h3{
   font-size: 2.3rem;
   height: 20rem;
   justify-content: center;
+  -ms-justify-content: center;
   -webkit-justify-content: center;
   margin: 0 1rem;
   padding: 3rem;
@@ -326,6 +331,7 @@ footer {
 
 .download {
   align-items: center;
+  -ms-align-items: center;
   -webkit-align-items: center;
   background-image: url(../img/download.png);
   background-repeat: no-repeat;
