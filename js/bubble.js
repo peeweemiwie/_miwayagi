@@ -1,3 +1,4 @@
+(function(){
 var diameter = 400,
     height = 400,
     width = 740,
@@ -9,10 +10,28 @@ var bubble = d3.layout.pack()
     .size([diameter, diameter])
     .padding(1.5);
 
+// var tooltip = d3.select('body').append('div')
+//       .attr('class', 'bubble-tooltip')
+//       .style('opacity', 0)
+
 var svg = d3.select("#chart-buzzwords").append("svg")
     .attr("width", width)
     .attr("height", height)
-    .attr("class", "bubble");
+    .attr("class", "bubble")
+
+    // .on('mouseover', function(d){
+    //   tooltip.transition()
+    //     .style('opacity', .9)
+    //   tooltip.html(d, name)
+    //     .style('left', (d3.event.pageX) + 'px')
+    //     .style('top', (d3.event.pageY) + 'px')
+    // })
+    //
+    // .on('mouseout', function(d){
+    //   tooltip.transition()
+    //     .style('opacity', 0)
+    // })
+
 
 d3.json("js/buzzwords.json", function(error, root) {
   var node = svg.selectAll(".node")
@@ -23,7 +42,7 @@ d3.json("js/buzzwords.json", function(error, root) {
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
   node.append("title")
-      .text(function(d) { return d.className + ": " + format(d.value); });
+      .text(function(d) { return d.className });
 
   node.append("circle")
       .attr("r", function(d) { return d.r; })
@@ -49,3 +68,4 @@ function classes(root) {
 }
 
 d3.select(self.frameElement).style("height", diameter + "px");
+})();

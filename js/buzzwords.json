@@ -37,8 +37,8 @@
         {"name": "algorithms", "size": 15000},
         {"name": "data mining", "size": 9000},
         {"name": "data analysis", "size": 9000},
-        {"name": "real-time data visualization", "size": 9000},
-        {"name": "medical informatics", "size": 12000}
+        {"name": "real-time data visualization", "size": 15000},
+        {"name": "medical informatics", "size": 20000}
       ]
     },
     {
@@ -53,7 +53,7 @@
       "name": "tools",
       "children": [
         {"name": "visual.ly", "size": 15000},
-        {"name": "Processing", "size": 15000},
+        {"name": "Processing", "size": 22000},
         {"name": "tableau", "size": 15000},
         {"name": "google publicdata", "size": 10000},
         {"name": "wordle.net", "size": 10000}

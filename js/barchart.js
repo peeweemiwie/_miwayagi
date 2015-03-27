@@ -1,4 +1,4 @@
-// barchart
+(function(){
 var skills = [
       {subject: 'HTML', years: 7},
       {subject: 'CSS', years: 7},
@@ -38,9 +38,7 @@ var yScale = d3.scale.ordinal()
       .rangeBands([0, height])
 
 var tooltip = d3.select('body').append('div')
-      .style('position', 'absolute')
-      .style('padding', '10px')
-      .style('background', '#FFF')
+      .attr('class', 'tooltip')
       .style('opacity', 0)
 
 var myChart = d3.select('#chart-skills').append('svg')
@@ -63,19 +61,25 @@ var myChart = d3.select('#chart-skills').append('svg')
         .style('opacity', .9)
 
       tooltip.html(d)
-        .style('left', (d3.event.pageX + 30) + 'px')
+        .style('left', (d3.event.pageX) + 'px')
         .style('top', (d3.event.pageY) + 'px')
+        .html(function() {
+          if(d<1){
+            return d + 'year';
+          }else{
+            return d + 'years'; }
+        })
 
-      d3.select(this)
-        .style('opacity', .5)
+      // d3.select(this)
+      //   .style('opacity', .5)
     })
 
     .on('mouseout', function(d){
       tooltip.transition()
         .style('opacity', 0)
 
-      d3.select(this)
-        .style('opacity', 1)
+      // d3.select(this)
+      //   .style('opacity', 1)
     })
 
 myChart.transition()
@@ -128,3 +132,4 @@ var hGuide = d3.select('svg').append('g')
       .style({ fill: 'none', stroke: "#000"})
       .selectAll('line')
       .style({ stroke: "#000"})
+})();

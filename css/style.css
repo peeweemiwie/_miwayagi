@@ -192,9 +192,23 @@ main article h3{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
+#chart-skills rect {
+  transition: opacity 200ms;
+}
+#chart-skills rect:hover {
+  opacity: .5;
+}
+
 /* ========== bubble chart ========== */
 #chart-buzzwords text {
   font: .5rem sans-serif;
+}
+#chart-buzzwords g.node {
+  transition: opacity 200ms;
+}
+#chart-buzzwords g.node:hover {
+  cursor: default;
+  opacity: .5;
 }
 
 /* ========== barchart && bubble chart ========== */
@@ -310,4 +324,12 @@ footer {
 }
 .download:hover {
   opacity: 1;
+}
+
+.tooltip {
+  background: #FFF;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  position: absolute;
 }
