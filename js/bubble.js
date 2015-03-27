@@ -1,36 +1,25 @@
 (function(){
-var diameter = 400,
+var diameter = 380,
     height = 400,
-    width = 740,
+    width = 400,
     format = d3.format(",d"),
-    color = d3.scale.category20();
+    color = d3.scale.category20()
+    buzzwordHeight = 300
+    buzzwordWidth = 300;
 
 var bubble = d3.layout.pack()
     .sort(null)
     .size([diameter, diameter])
     .padding(1.5);
 
-// var tooltip = d3.select('body').append('div')
-//       .attr('class', 'bubble-tooltip')
-//       .style('opacity', 0)
-
 var svg = d3.select("#chart-buzzwords").append("svg")
     .attr("width", width)
     .attr("height", height)
     .attr("class", "bubble")
 
-    // .on('mouseover', function(d){
-    //   tooltip.transition()
-    //     .style('opacity', .9)
-    //   tooltip.html(d, name)
-    //     .style('left', (d3.event.pageX) + 'px')
-    //     .style('top', (d3.event.pageY) + 'px')
-    // })
-    //
-    // .on('mouseout', function(d){
-    //   tooltip.transition()
-    //     .style('opacity', 0)
-    // })
+var tooltip = d3.select('#chart-buzzwords').append('div')
+    .attr('class', 'buzzword')
+    .text('Data Visualization')
 
 
 d3.json("js/buzzwords.json", function(error, root) {
@@ -41,9 +30,6 @@ d3.json("js/buzzwords.json", function(error, root) {
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
-  node.append("title")
-      .text(function(d) { return d.className });
-
   node.append("circle")
       .attr("r", function(d) { return d.r; })
       .style("fill", function(d) { return color(d.packageName); });
@@ -52,6 +38,11 @@ d3.json("js/buzzwords.json", function(error, root) {
       .attr("dy", ".3em")
       .style("text-anchor", "middle")
       .text(function(d) { return d.className.substring(0, d.r / 3); });
+
+    node.on('mouseover', function(d){
+      tooltip.html(d)
+        .text(function() { return d.className });
+    });
 });
 
 // Returns a flattened hierarchy containing all leaf nodes under the root.
@@ -67,5 +58,4 @@ function classes(root) {
   return {children: classes};
 }
 
-d3.select(self.frameElement).style("height", diameter + "px");
 })();

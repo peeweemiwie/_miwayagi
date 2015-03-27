@@ -69,17 +69,11 @@ var myChart = d3.select('#chart-skills').append('svg')
           }else{
             return d + 'years'; }
         })
-
-      // d3.select(this)
-      //   .style('opacity', .5)
     })
 
     .on('mouseout', function(d){
       tooltip.transition()
         .style('opacity', 0)
-
-      // d3.select(this)
-      //   .style('opacity', 1)
     })
 
 myChart.transition()

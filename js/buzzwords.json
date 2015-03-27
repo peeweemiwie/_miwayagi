@@ -7,7 +7,7 @@
     {
      "name": "data visualization",
      "children": [
-      {"name": "Data Visualization", "size": 50000},
+      {"name": "Data Visualization", "size": 60000},
       {"name": "Big Data", "size": 30000},
       {"name": "Data Science", "size": 20000}
      ]

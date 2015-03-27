@@ -200,8 +200,16 @@ main article h3{
 }
 
 /* ========== bubble chart ========== */
+
+#chart-buzzwords {
+  align-items: center;
+  -webkit-align-items: center;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
 #chart-buzzwords text {
-  font: .5rem sans-serif;
+  font: 10px sans-serif;
 }
 #chart-buzzwords g.node {
   transition: opacity 200ms;
@@ -210,10 +218,18 @@ main article h3{
   cursor: default;
   opacity: .5;
 }
+#chart-buzzwords .buzzword {
+  color: #777;
+  font-family: tahoma, Arial, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+  width: calc(100% - 400px);
+}
 
 /* ========== barchart && bubble chart ========== */
-#chart-skills svg,
-#chart-buzzwords svg {
+#chart-skills,
+#chart-buzzwords {
   border: 2px solid #EEE;
   border-radius: .3rem;
   margin-bottom: 2rem;
@@ -326,10 +342,11 @@ footer {
   opacity: 1;
 }
 
-.tooltip {
+.tooltip{
   background: #FFF;
   border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   padding: 10px;
   position: absolute;
 }
