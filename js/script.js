@@ -1,3 +1,4 @@
+(function(){
 var d = document;
 var scrollTopButtons = [
   d.querySelectorAll('.page-wrapper header nav a')[0],
@@ -21,3 +22,15 @@ for (j; j<scrollBottomButtons.length; j++){
     window.scrollTo(0, d.body.scrollHeight);
   }, true)
 }
+
+// Make header narrower when page is scrolled
+window.addEventListener('scroll', function(){
+var pageY = window.pageYOffset;
+var d = document;
+  if(pageY > 100){
+    d.querySelector('header').classList.add('narrow');
+  } else if (pageY < 100) {
+    d.querySelector('header').classList.remove('narrow');
+  }
+})
+})();

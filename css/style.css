@@ -22,6 +22,7 @@ body {
   max-width: 900px;
   position: fixed;
   top: 0;
+  transition: height 300ms;
   width: 100%;
   z-index: 3;
 }
@@ -31,6 +32,7 @@ body {
   font-size: 6rem;
   font-weight: normal;
   margin: 0 0 -.8rem 0;
+  transition: font-size 500ms;
 }
 .page-wrapper > header h1 span {
   display: inline-block;
@@ -38,7 +40,6 @@ body {
 .page-wrapper > header h1 span::first-letter {
   color: rgb(252, 107, 4);
 }
-
 .page-wrapper > header nav,
 .page-wrapper footer nav {
   display: flex;
@@ -59,7 +60,7 @@ body {
   font-size: 4.5rem;
   padding: 0 1rem;
   text-decoration: none;
-  transition: background 300ms;
+  transition: background 500ms;
 }
 .page-wrapper > header nav a:hover,
 .page-wrapper footer nav a:hover {
@@ -84,6 +85,19 @@ body {
 .page-wrapper > header nav a:nth-of-type(3)::first-letter,
 .page-wrapper footer nav a:nth-of-type(3)::first-letter {
   color: rgb(150, 199, 105);
+}
+.page-wrapper > header nav a {
+  transition: font-size 500ms;
+}
+/* When page scrolled, header gets narrow */
+.page-wrapper > header.narrow{
+  height: 4rem;
+}
+.page-wrapper > header.narrow h1 {
+  font-size: 4rem;
+}
+.page-wrapper > header.narrow nav a{
+  line-height: 70%
 }
 main {
   margin-top: 7rem;
