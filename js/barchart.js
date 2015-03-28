@@ -20,8 +20,10 @@ bardata.sort(function compareNumbers(a,b) {
 
 var margin = {top: 30, right: 30, bottom: 40, left: 100}
 
-var height = 300 - margin.top - margin.bottom,
-    width = 740 - margin.left - margin.right,
+var initialHeight = 300,
+    initialWidth = 740,
+    height = initialHeight - margin.top - margin.bottom,
+    width = initialWidth - margin.left - margin.right,
     barOffset = 5,
     barHeight = Math.floor(height / bardata.length) - barOffset;
 
@@ -41,7 +43,7 @@ var tooltip = d3.select('body').append('div')
       .attr('class', 'tooltip')
       .style('opacity', 0)
 
-var myChart = d3.select('#chart-skills').append('svg')
+var svg = d3.select('#chart-skills').append('svg')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
     .append('g')
@@ -55,11 +57,9 @@ var myChart = d3.select('#chart-skills').append('svg')
       .attr('y', function(d, i) {
           return i * (barHeight + barOffset);
       })
-
     .on('mouseover', function(d){
       tooltip.transition()
         .style('opacity', .9)
-
       tooltip.html(d)
         .style('left', (d3.event.pageX) + 'px')
         .style('top', (d3.event.pageY) + 'px')
@@ -70,19 +70,20 @@ var myChart = d3.select('#chart-skills').append('svg')
             return d + 'years'; }
         })
     })
-
     .on('mouseout', function(d){
       tooltip.transition()
         .style('opacity', 0)
     })
 
-myChart.transition()
+svg.transition()
     .attr('width', function(d) {
         return xScale(d);
     })
     .delay(function(d, i){
       return i * 100;
     })
+
+
 
 // left side axis
 var vGuideScale = d3.scale.linear()
@@ -121,9 +122,16 @@ var hAxis = d3.svg.axis()
 var hGuide = d3.select('svg').append('g')
     hAxis(hGuide)
     hGuide.attr('transform', 'translate(' + margin.left + ', ' + (height + margin.top) + ')')
-      .classed('h-guide', true)
+      .attr('class', 'h-guide')
       .selectAll('path')
       .style({ fill: 'none', stroke: "#000"})
       .selectAll('line')
       .style({ stroke: "#000"})
+
+var hGuideText = d3.select('svg').append('text')
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", initialWidth - margin.right)
+      .attr("y", initialHeight - margin.bottom - 10)
+      .text("Years");
 })();
