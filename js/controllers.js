@@ -10,10 +10,17 @@ myApp.controller('MyController', function MyController($scope) {
         'company': 'New York Magazine',
         'skill': 'HTML5, CSS3, javascript, jQuery, node.js, wordpress',
         'detail': [
-            'Responsive Website, Desktop, Mobile, Tablet',
-            'Sites: nymag, vulture, thecut, bedford+bowery, science of us',
-            'Working closely with sr. developers, designers, product owners to create components from PSD.',
-            'Agile environment, github as version control, node.js'
+          'Brands: ​New York Magazine, Vulture, The Cut, Bedford + Bowery, Science of Us',
+          'Creating components from Photoshop wireframes using HTML, CSS and JavaScript in a Node.js environment',
+          'Testing cross­browser compatibility in Chrome, Firefox, Safari, and IE 9,10 and 11',
+          'Working in an agile environment, communicating closely with designers and product managers',
+          'Working both independently on small projects, as well as in a team of large­scale projects, such as the:',
+        ],
+        'more': [
+          'original release for The Cut in 2012, creating numerous responsive design components and prototypes, which drew attention as an early adopter of mobile­-first strategy.',
+          'prototype and page layout for a pop­up page which displayed Oscar real time results.',
+          'utilization of Optimizely as an A/B testing tool, creating randomized experiments with multiple variants.',
+          'creation of a child theme in WordPress for an NYU collaboration blog, Bedford + Bowery.'
         ]
     }, {
         'title': 'Freelance: HTML Developer',
@@ -22,8 +29,14 @@ myApp.controller('MyController', function MyController($scope) {
             'end': 'April 2012'
         },
         'company': 'Clients: Standard & Poors, AKA NYC, Manhattan Marketing Ensemble, Tag Worldwide, Exposure New York, Mundocom - Publicis',
-        'skill': 'HTML, CSS, flash animation',
-        'detail': ['HTML / CSS development, Flash ad banner, Business to Business Newsletter templates, Email campaign and landing pages']
+        'skill': 'HTML, CSS, Flash animation',
+        'detail': [
+           'Email campaigns and microsites for newly released electric appliances.',
+           'Flash ad banners.',
+           'Email campaigns and landing pages for an American global hospitality company to track promotions responses.',
+           'Internal site for a global leader in the beverage industry to provide their corporate guidelines.',
+           'Business­to­business newsletter templates for Microsoft Outlook, which are easily altered depending on users’ preference in subscription.'
+        ]
     }, {
         'title': 'Web Content Administration',
         'time': {
@@ -32,14 +45,18 @@ myApp.controller('MyController', function MyController($scope) {
         },
         'company': 'Evolution Store',
         'skill': 'HTML, CSS',
-        'detail': ['HTML web page development, Email campaign and landing page']
+        'detail': [
+          'HTML/CSS web­page development.',
+          'Developed splash web pages in HTML and CSS for e­commerce site.',
+          'Coded, sent and tracked email campaigns using StreamSend.'
+        ]
     }];
     $scope.education = [{
-        'course': 'Certificate in web development',
-        'school': 'New York University - Still in progress',
+        'course': 'Certificate in Web Development',
+        'school': 'New York University',
         'subjects': 'JavaScript, Information Architecture, HTML5'
     }, {
-        'course': 'Certificate in web digital design',
+        'course': 'Certificate in Web Digital Design',
         'school': 'Baruch College',
         'subjects': 'Illustrator, Photoshop, InDesign, Dreamweaver, Flash Animation, ActionScript 2, Fireworks,HTML, CSS, JavaScript'
     }]

@@ -192,6 +192,10 @@ main article h3{
   content: "\2022  ";
   color: #FC6B04;
 }
+.experience > div p.more:before {
+  content: "- ";
+  color: #FC6B04;
+}
 /* ========== contact page ========== */
 .contact article {
   display: flex;

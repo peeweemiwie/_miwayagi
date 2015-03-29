@@ -264,7 +264,7 @@ main article h3{
 }
 .experience > div p.time.end,
 .experience > div p.time.start {
-  background: #FC6B04;
+  background: #FCB704;
   border-radius: .3rem;
   color: #FFF;
   display: inline-block;
@@ -273,8 +273,18 @@ main article h3{
   margin-left: -2.5rem;
   padding: 0.6rem;
 }
+.experience > div p.detail {
+  margin-left: 1rem;
+}
 .experience > div p.detail:before {
   content: "\2022  ";
+  color: #FC6B04;
+}
+.experience > div p.more {
+  margin-left: 2rem;
+}
+.experience > div p.more:before {
+  content: "- ";
   color: #FC6B04;
 }
 /* ========== contact page ========== */
